@@ -6,14 +6,14 @@ order: 260
 When we say we're going to *complete* our pattern, we mean we're going to add
 things like a title and a scalebox and so on.
 
-These things or not always wanted on a pattern. For example, if you're cutting
-out patterns with a laser cutter, or tracing them with a projects, you
+These things are not always wanted on a pattern. For example, if you're cutting
+out patterns with a laser cutter, or tracing them with a projector, you
 typically only want to have the pattern outline.
 
 ## The complete setting
 
-Users can indicate their desire to have either a bare-bones pattern, or rather
-when that's completed with all bells and whistles with [the
+Users can indicate their desire to have either a bare-bones pattern or
+one that's completed with all bells and whistles with [the
 `complete` setting](/reference/settings/complete).
 
 To make sure we respect the user's choice, we must wrap all of these
@@ -365,7 +365,7 @@ function draftBib({
     /*
      * This macro adds a scalebox to our part
      */
-    // Add a scalbox
+    // Add a scalebox
     points.scalebox = points.title
       .shift(-90, 55)
     macro(
@@ -376,8 +376,8 @@ function draftBib({
     /*
      * Our bib should be finished with bias tape.
      * To add it, we're using Path.offset()
-     * You will learn to LOVE this methid
-     * when designing pattern with seam allowance
+     * You will learn to LOVE this method
+     * when designing patterns with seam allowance
      * as it draws a path parallel to another one
      */
     paths.bias = paths.seam
