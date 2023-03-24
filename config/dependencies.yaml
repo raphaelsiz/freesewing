@@ -201,7 +201,6 @@ yuri:
   peer:
     '@freesewing/brian': *freesewing
     '@freesewing/plugin-bust': *freesewing
-
 # Sites go here
 
 backend:
