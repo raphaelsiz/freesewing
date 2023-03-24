@@ -112,6 +112,9 @@ noble:
 legend:
   peer:
     '@freesewing/plugin-buttons': *freesewing
+odin:
+  peer:
+    '@freesewing/simon': *freesewing
 paco:
   peer:
     '@freesewing/titan': *freesewing
