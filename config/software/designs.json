@@ -56,6 +56,13 @@
       "difficulty": 3,
       "tags": ["accessories", "bags"]
     },
+    "hubbie": {
+      "description": "A FreeSewing pattern that needs a description",
+      "code": "Coder name",
+      "design": "Designer name",
+      "difficulty": 1,
+      "tags": ["tagname"]
+    },
     "lucy": {
       "description": "A FreeSewing pattern for a historical tie-on pocket",
       "code": "SeaZeeZee",
