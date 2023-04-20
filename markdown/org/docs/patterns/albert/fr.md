@@ -1,5 +1,5 @@
 - - -
-titre: "Tablier Albert "
+title: "Albert apron"
 - - -
 
 <PatternDocs pattern='albert' />

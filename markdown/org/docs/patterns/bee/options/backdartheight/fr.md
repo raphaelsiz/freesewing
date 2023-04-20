@@ -1,10 +1,10 @@
 - - -
-hauteur de la pince dos (Bella)"
+title: "Back dart height (Bella)"
 - - -
 
 ***
 
-Contrôle la hauteur de pince dos dans le bloc de Bella sur lequel est basé Bee
+Controls the back dart height in the underlying Bella block Bee is based on
 
 ## Effet de cette option sur le motif
 

@@ -1,10 +1,10 @@
 - - -
-titre : "aisance thoracique"
+title: "Chest ease"
 - - -
 
 ***
 
-Contrôle l'aisance de la poitrine dans le bloc de Bella sur lequel est basé Bee
+Controls the chest ease in the underlying Bella block Bee is based on
 
 ## Effet de cette option sur le motif
 

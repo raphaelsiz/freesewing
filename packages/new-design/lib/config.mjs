@@ -136,7 +136,6 @@ yarn-error.log*
       'shared/components/mdx/highlight.mjs',
       'shared/components/mdx/http.mjs',
       'shared/components/mdx/index.mjs',
-      'shared/components/mdx/mermaid.mjs',
       'shared/components/mdx/prev-next.mjs',
       'shared/components/mdx/read-more.mjs',
       'shared/components/mdx/tabbed-example.mjs',

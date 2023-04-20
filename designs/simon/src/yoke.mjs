@@ -27,7 +27,7 @@ function simonYoke({
   else {
     macro('mirror', {
       mirror: [points.cbNeck, points.cbYoke],
-      paths: ['saBase'],
+      paths: [paths.saBase],
       clone: true,
     })
     paths.saBase = paths.saBase.join(paths.mirroredSaBase.reverse())

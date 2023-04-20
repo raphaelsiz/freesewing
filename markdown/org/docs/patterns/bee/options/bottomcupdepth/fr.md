@@ -1,10 +1,10 @@
 - - -
-title: "Profondeur vers le bas"
+title: "Bottom depth"
 - - -
 
 ***
 
-Contrôle la longueur du bikini vers le bas
+Controls how far the bikini cup extends downwards
 
 ## Effet de cette option sur le motif
 

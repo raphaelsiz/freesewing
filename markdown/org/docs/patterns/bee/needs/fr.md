@@ -1,18 +1,18 @@
 ---
-title: "Haut bikini Bee: Ce dont vous avez besoin"
+title: "Bee bikini top: What You Need"
 ---
 
-Pour faire Bee, vous aurez besoin des éléments suivants :
+To make Bee, you will need the following:
 
 - Fourniture de base pour la couture
-- Environ 0.5 à 1 mètre (0.6 - 1.1 yards) d'un tissu adapté ([voir Options de tissu pour Bee](/docs/patterns/bee/fabric/))
-- (Facultatif) Environ 0,5 - 1 mètre (0,6 - 1,1 mètre) de tissu de doublage ([voir les options d'étoffe pour Bee](/docs/patterns/bee/fabric/))
-- (Facultatif) Rubans/rubans/cordons pour les bretelles de cou et les bandes, de la même longueur et largeur que les bretelles et/ou les bandes.
+- About 0.5 - 1 metre (0.6 - 1.1 yards) of a suitable fabric ([see Bee Fabric options](/docs/patterns/bee/fabric/))
+- (Optional) About 0.5 - 1 metre (0.6 - 1.1 yards) of lining fabric ([see Bee Fabric options](/docs/patterns/bee/fabric/))
+- (Optional) Ribbons/Tapes/Cords for neck ties and bands, with the same length and width as neck tie and/or band.
 
 <Note>
 
-Le tissu de doublure n'est nécessaire que si vous voulez rendre ce patron réversible. Si vous ne le faites pas, vous n'avez besoin que du tissu principal.  
-Vous pouvez utiliser une surjeteuse pour construire ce modèle, mais ce n'est pas obligatoire.  
-Des rubans/Cordons/Cordes peuvent être utilisés au lieu de créer des liens personnalisés. Veillez à obtenir plus que ce dont vous avez besoin et vous pourrez les ajuster après la réalisation.
+The lining fabric is only needed if you want to make this pattern reversible. If you don't, you only need the main fabric.  
+You can use a serger/overlocker to construct this pattern but it is not mandatory.  
+Ribbons/Tapes/Cords can be used instead of making custom ties. Just make sure to get more than you need and that you cut down to size after construction.
 
 </Note>

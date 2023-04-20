@@ -1,10 +1,10 @@
 - - -
-titre : "Longueur de la bande (poitrine)"
+title: "Band (chest) tie length"
 - - -
 
 ***
 
-Contrôle la longueur des bandes autour de votre poitrine
+Controls the length of the tie around your chest
 
 ## Effet de cette option sur le motif
 

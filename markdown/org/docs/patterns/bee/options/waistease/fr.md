@@ -1,10 +1,10 @@
 - - -
-titre : "Aisance pour les hanches"
+title: "Waist ease"
 - - -
 
 ***
 
-Contrôle l'aisance de la taille dans le bloc de Bella sur lequel est basé Bee
+Controls the waist ease in the underlying Bella block Bee is based on
 
 ## Effet de cette option sur le motif
 

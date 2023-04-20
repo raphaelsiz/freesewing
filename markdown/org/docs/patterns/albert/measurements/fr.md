@@ -1,5 +1,5 @@
 - - -
-titre : "Tablier Albert : Mesures nécessaires"
+title: "Albert apron: Required Measurements"
 - - -
 
 <PatternMeasurements pattern='albert' />

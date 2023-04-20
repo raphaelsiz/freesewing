@@ -1,10 +1,10 @@
 - - -
-titre: "Courbe avant"
+title: "Front curve"
 - - -
 
 ***
 
-Contrôle la courbure du devant du bikini
+Controls the curvature of the front of the bikini cup
 
 ## Effet de cette option sur le motif
 

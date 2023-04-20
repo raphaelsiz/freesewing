@@ -1,5 +1,5 @@
 - - -
-title: "Tablier Albert: Options de conception"
+title: "Albert apron: Design Options"
 - - -
 
 <PatternOptions pattern='albert' />

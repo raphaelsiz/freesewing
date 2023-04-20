@@ -2,7 +2,7 @@ width:
   title: Width
   description: Width of the pocket
 length:
-  title: Longueur
+  title: Length
   description: Length (depth) of the pocket
 edge:
   title: Taper

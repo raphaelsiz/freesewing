@@ -157,7 +157,6 @@ export const WorkbenchWrapper = ({
     gistReady,
     showInfo: setPopup,
     hasRequiredMeasurements,
-    draft,
   }
   // Required props for layout
   const layoutProps = {

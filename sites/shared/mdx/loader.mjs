@@ -71,7 +71,7 @@ export const mdxLoader = async (language, site, slug, jargon) => {
         [
           rehypeHighlight,
           {
-            plainText: ['dot', 'http', 'mermaid'],
+            plainText: ['dot', 'http'],
             aliases: {
               javascript: [
                 'design/src/index.mjs',

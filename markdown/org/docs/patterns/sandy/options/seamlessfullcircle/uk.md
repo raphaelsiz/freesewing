@@ -8,9 +8,7 @@ Select 'yes' for a seamless circle, which is cut on a double fold. Since it has 
 
 <Note>
 
-- This produces a full circle ignoring the _Circle percent_ option.
-- You may need to use the [gathering option](sandy/options/gathering) to increase the waist circumference to fit over your seat/hips.
-- You will need to set the [waistband overlap](sandy/options/waistbandoverlap) to 0%.
+This produces a full circle ignoring the _Circle percent_ option.
 
 </Note>
 
