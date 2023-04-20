@@ -14,8 +14,8 @@ function draftBox({
   macro,
   part,
 }) {
-  const diameter = 500 * options.thickness
-  const height = diameter * options.length
+  const diameter = 450 * options.thickness
+  const height = diameter * options.length * 1.5
   const width = diameter * Math.PI
   points.topLeft = new Point(0, 0)
   points.topRight = new Point(width, 0)
@@ -62,8 +62,8 @@ function draftBox({
   return part
 }
 
-export const frontWall = {
-  name: 'frontWall',
+export const backWall = {
+  name: 'backWall',
   options: {
     thickness: { pct: 50, min: 10, max: 100, menu: 'style' },
     length: { pct: 100, min: 60, max: 120, menu: 'style' },

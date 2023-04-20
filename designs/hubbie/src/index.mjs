@@ -3,13 +3,16 @@
 import { Design } from '@freesewing/core'
 import { data } from '../data.mjs'
 // Parts
-import { box } from './box.mjs'
+import { frontWall } from './frontWall.mjs'
+import { backWall } from './backWall.mjs'
+import { front } from './front.mjs'
+import { back } from './back.mjs'
 
 // Create new design
 const Hubbie = new Design({
   data,
-  parts: [box],
+  parts: [frontWall, backWall, front, back],
 })
 
 // Named exports
-export { box, Hubbie }
+export { frontWall, backWall, front, back, Hubbie }
