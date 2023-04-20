@@ -4,9 +4,9 @@ title: Longueur épaule-taille devant
 
 <Note>
 
-###### PHE : point haut de l'épaule
+###### HPS: high point shoulder
 
-Le point _haut de l'épaule_ ou _PHE_ est utilisé comme base pour plusieurs mesures verticales.
+The _high point shoulder_ or _HPS_ point is used as the base for several vertical measurements.
 Reportez-vous à la [documentation PHE](/docs/measurements/hps/) pour savoir comment localiser ce point.
 
 </Note>

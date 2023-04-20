@@ -1,10 +1,10 @@
 - - -
-titre : "Largeur de buste (Bella)"
+title: "High bust width (Bella)"
 - - -
 
 ***
 
-Contrôle la largeur du buste dans le bloc Bella sur lequel est basé Bee
+Controls the high bust width in the underlying Bella block Bee is based on
 
 ## Effet de cette option sur le motif
 

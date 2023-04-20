@@ -1,10 +1,10 @@
 - - -
-titre: "Les liens"
+title: "Ties"
 - - -
 
 ***
 
-S'il faut inclure les liens, ou pas
+Whether to includes ties, yes or no
 
 ## Effet de cette option sur le motif
 

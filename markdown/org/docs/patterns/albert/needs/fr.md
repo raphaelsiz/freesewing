@@ -1,8 +1,8 @@
 - - -
-titre : "Tablier Albert : Ce qu'il faut"
+title: "Albert apron: What You Need"
 - - -
 
-Pour réaliser Albert, vous aurez besoin de :
+To make Albert, you will need the following:
 
 - [Fourniture de base pour la couture](/docs/sewing/basic-sewing-supplies)
-- Environ 1,25 mètre (1.4 yards) (en fonction de la longueur de votre tablier) d'un tissu approprié ([voir les options de tissu](/docs/patterns/albert/fabric))
+- About 1.25 meters (1.4 yards) (depending on the length of your apron) of a suitable fabric ([see Fabric options](/docs/patterns/albert/fabric))

@@ -1,7 +1,7 @@
 import { roundPlugin } from '@freesewing/plugin-round'
 import { base } from './base.mjs'
 
-const pluginRound = ({ Point, points, Path, paths, macro, options, part, store }) => {
+const pluginRound = ({ Point, points, Path, paths, macro, options, part }) => {
   if (['round', 'all'].indexOf(options.plugin) !== -1) {
     points.topLeft = new Point(0, 0)
     points.bottomLeft = new Point(0, 30)
@@ -34,13 +34,6 @@ const pluginRound = ({ Point, points, Path, paths, macro, options, part, store }
       via: points.topRight,
       prefix: 'tr',
       ...opts,
-    })
-
-    macro('bannerbox', {
-      topLeft: new Point(5, 5),
-      bottomRight: new Point(95, 25),
-      text: 'macro = round',
-      ...store.get('bannerbox.plugin'),
     })
   }
 

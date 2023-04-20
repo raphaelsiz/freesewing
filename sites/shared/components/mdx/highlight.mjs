@@ -1,6 +1,5 @@
 import { CopyToClipboard } from 'shared/components/copy-to-clipboard.mjs'
 import { HttpStatusCode } from './http.mjs'
-import { Mermaid } from './mermaid.mjs'
 
 const names = {
   js: 'Javascript',
@@ -20,9 +19,6 @@ export const Highlight = (props) => {
       [status, language] = language.split('.')
     }
   }
-
-  // Mermaid should not be highlighted, but rendered
-  if (language === 'mermaid') return <Mermaid>{props.children}</Mermaid>
 
   const preProps = {
     className: `language-${language} hljs text-base lg:text-lg whitespace-pre overflow-scroll pr-4`,

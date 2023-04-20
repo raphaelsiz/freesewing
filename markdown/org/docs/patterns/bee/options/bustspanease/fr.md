@@ -1,10 +1,10 @@
 - - -
-titre : "Facilité de l'aisance du buste"
+title: "Bust span ease"
 - - -
 
 ***
 
-Contrôle l'aisance de l'écart de poitrine dans le bloc Bella sur lequel est basé Bee
+Controls the bust span ease in the underlying Bella block Bee is based on
 
 ## Effet de cette option sur le motif
 

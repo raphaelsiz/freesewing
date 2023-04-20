@@ -1,10 +1,10 @@
 - - -
-titre: "Couleurs de liens de cou "
+title: "Neck tie colours"
 - - -
 
 ***
 
-Que vous vouliez une seule couleur autour de votre cou, ou des couleurs doubles
+Whether you want single color ties around your neck, or dual-coloured ones
 
 ## Effet de cette option sur le motif
 

@@ -1,10 +1,10 @@
 - - -
-titre : "Largeur des épaules à l'avant (Bella)"
+title: "Front shoulder width (Bella)"
 - - -
 
 ***
 
-Contrôle la largeur de l'épaule avant dans le bloc Bella sur lequel est bése le patron Bee
+Controls the front shoulder width in the underlying Bella block Bee is based on
 
 ## Effet de cette option sur le motif
 

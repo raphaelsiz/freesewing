@@ -1,10 +1,10 @@
 - - -
-titre: "Profondeur latérale"
+title: "Side depth"
 - - -
 
 ***
 
-Contrôle jusqu'à quel point le bonnet du bikini se prolonge vers le côté
+Controls how far the bikini cup extends towards the side
 
 ## Effet de cette option sur le motif
 

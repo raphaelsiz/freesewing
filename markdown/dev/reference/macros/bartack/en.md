@@ -3,8 +3,7 @@ title: bartack
 ---
 
 The `bartack` macro allows you to add a _bartack_ marker to your sewing
-pattern.
-It is provided by the [annotations plugin](/reference/plugins/annotations).
+pattern. It is provided by the [bartack plugin](/reference/plugins/bartack/).
 
 ## Signature
 

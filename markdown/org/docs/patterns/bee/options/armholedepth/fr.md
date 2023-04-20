@@ -1,10 +1,10 @@
 - - -
-titre : "Profondeur d'emmanchure (Bella)"
+title: "Armhole depth (Bella)"
 - - -
 
 ***
 
-Contrôle la profondeur de l'emmanchure dans le bloc de Bella sur lequel est basé Bee
+Controls the armhole depth in the underlying Bella block Bee is based on
 
 ## Effet de cette option sur le motif
 

@@ -1,5 +1,5 @@
 - - -
-titre : "Tablier Albert : Instructions de coupe"
+title: "Albert apron: Cutting Instructions"
 - - -
 
 - Couper **1 devant** au pli
