@@ -70,6 +70,13 @@
       "difficulty": 4,
       "tags": ["accessories", "toys"]
     },
+    "sammy": {
+      "description": "A FreeSewing pattern for a pair of classic sneakers",
+      "code": "Raphael Sizemore",
+      "design": "Raphael Sizemore",
+      "difficulty": 4,
+      "tags": ["accessories", "shoes"]
+    },
     "trayvon": {
       "description": "A FreeSewing pattern for a tie",
       "code": "Joost De Cock",
