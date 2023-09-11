@@ -1,5 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
-
 function trayvonFabricLoop({
   points,
   Point,
@@ -24,6 +22,8 @@ function trayvonFabricLoop({
     .line(points.topLeft)
     .close()
     .attr('class', 'fabric')
+
+  store.cutlist.addCut({ cut: 1, material: 'lining' })
 
   if (complete) {
     points.title = points.topLeft.shiftFractionTowards(points.bottomRight, 0.5)
@@ -54,6 +54,5 @@ function trayvonFabricLoop({
 export const fabricLoop = {
   name: 'trayvon.fabricLoop',
   measurements: ['hpsToWaistBack', 'waistToHips', 'neck'],
-  plugins: [pluginBundle],
   draft: trayvonFabricLoop,
 }

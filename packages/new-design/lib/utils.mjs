@@ -8,7 +8,7 @@ import prompts from 'prompts'
 import { oraPromise } from 'ora'
 import { execa } from 'execa'
 import axios from 'axios'
-import { fileURLToPath } from 'url'
+import { fileURLToPath, pathToFileURL } from 'url'
 
 // Current working directory
 let filename
@@ -49,8 +49,9 @@ export const checkNodeVersion = () => {
 
 // Helper method to validate the design name
 const validateDesignName = (name) => {
-  if (/^([a-z]+)$/.test(name)) return true
-  else return ' 🙈 Please use only [a-z], no spaces, no capitals, no nothing 🤷'
+  if (/^([a-z][a-z0-9_]*)$/.test(name)) return true
+  else
+    return ' 🙈 Please use only lowercase letters, digits, or underscores. Names must start with a lowercase letter. 🤷'
 }
 
 // Gets user input to figure out what to do
@@ -106,15 +107,15 @@ export const getChoices = async () => {
             await prompts({
               type: 'text',
               name: 'name',
-              message: 'What name would you like the design to have? 🏷️ ([a-z] only)',
+              message: 'What name would you like the design to have? 🏷️ ([a-z0-9_] only)',
               validate: validateDesignName,
             })
           ).name
 
     // check whether a folder with that name already exists
-    config.dest = join(cwd, name)
+    const dest = join(cwd, name)
     try {
-      const dir = await opendir(config.dest)
+      const dir = await opendir(dest)
       dir.close()
     } catch {
       // the folder didn't exist, so we're good to go
@@ -219,6 +220,7 @@ const copyPackageJson = async (config, choices) => {
     name: choices.name,
     tag: config.tag,
     dependencies: config.templateData.dependencies,
+    includeTests: choices.includeTests,
   })
 }
 
@@ -299,7 +301,8 @@ const copyAll = async (config, choices) => {
   // Copy shared files
   promises = promises.concat(
     config.relativeFiles.shared.map((from) => {
-      copyFileOrTemplate(config.source.shared, config.dest, from)
+      if (choices.includeTests || !from.match(/e2e|playwright/))
+        copyFileOrTemplate(config.source.shared, config.dest, from)
     })
   )
 
@@ -412,6 +415,7 @@ const showTips = (config, choices) => {
 
 // Creates the environment based on the user's choices
 export const createEnvironment = async (choices) => {
+  config.dest = join(process.cwd(), choices.name)
   // Store directories for re-use
   config.source = {
     templateData: join(newDesignDir, `templates/from-${choices.template}.mjs`),
@@ -435,7 +439,7 @@ export const createEnvironment = async (choices) => {
     shared: (await rdir(config.source.shared)).map((file) => relative(config.source.shared, file)),
   }
 
-  config.templateData = await import(config.source.templateData)
+  config.templateData = await import(pathToFileURL(config.source.templateData))
   // does this base have parts with a lot of attending config?
   config.complexParts = typeof config.templateData.parts[0] === 'object'
 

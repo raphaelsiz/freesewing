@@ -1,5 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
-
 function draftFlorentTop({
   paperless,
   sa,
@@ -137,6 +135,16 @@ function draftFlorentTop({
   // Uncomment to see the side part here
   paths.side.hide()
 
+  points.grainlineFrom = new Point(points.midSideCp1.x, points.midBack.y)
+  points.grainlineTo = points.midBack.clone()
+  macro('grainline', {
+    from: points.grainlineFrom,
+    to: points.grainlineTo,
+  })
+
+  store.cutlist.addCut({ cut: 2 })
+  store.cutlist.addCut({ cut: 2, material: 'lining' })
+
   if (complete) {
     points.title = new Point(points.midMid.x, points.midFrontCp2.y)
     macro('title', {
@@ -146,12 +154,6 @@ function draftFlorentTop({
     })
     points.logo = new Point(points.title.x / 2, points.title.y)
     snippets.logo = new Snippet('logo', points.logo).attr('data-scale', 0.75)
-    points.grainlineFrom = new Point(points.midSideCp1.x, points.midBack.y)
-    points.grainlineTo = points.midBack.clone()
-    macro('grainline', {
-      from: points.grainlineFrom,
-      to: points.grainlineTo,
-    })
     macro('miniscale', { at: new Point(points.title.x * 0.75, points.title.y) })
     macro('sprinkle', {
       snippet: 'notch',
@@ -232,6 +234,5 @@ export const top = {
     // Percentages
     headEase: { pct: 2, min: 0, max: 5, menu: 'fit' },
   },
-  plugins: [pluginBundle],
   draft: draftFlorentTop,
 }

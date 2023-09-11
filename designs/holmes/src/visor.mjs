@@ -1,4 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
 import { pctBasedOn } from '@freesewing/core'
 
 function draftHolmesVisor({
@@ -13,6 +12,7 @@ function draftHolmesVisor({
   paperless,
   macro,
   absoluteOptions,
+  store,
   part,
 }) {
   let headCircumference = measurements.head + absoluteOptions.headEase
@@ -62,9 +62,14 @@ function draftHolmesVisor({
     .hide()
 
   paths.seam = paths.saOuter.join(paths.saInner).close()
+
+  macro('grainline', { from: points.in1, to: points.ex1 })
+
+  store.cutlist.addCut({ cut: 4 })
+  store.cutlist.addCut({ cut: 2, material: 'insert' })
+
   // Complete?
   if (complete) {
-    macro('grainline', { from: points.in1, to: points.ex1 })
     macro('title', { at: points.ex1.shift(45, 20), nr: 2, title: 'visor', scale: 0.4 })
 
     if (sa) {
@@ -120,6 +125,5 @@ export const visor = {
     visorWidth: { pct: 5, min: 1, max: 17, snap: 5, ...pctBasedOn('head'), menu: 'style' },
     visorLength: { pct: 100, min: 80, max: 150, menu: 'advanced' },
   },
-  plugins: [pluginBundle],
   draft: draftHolmesVisor,
 }

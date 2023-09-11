@@ -1,3 +1,5 @@
+import { version } from '../data.mjs'
+
 export const config = {
   // Whether we're publishing next or latest tags
   tag: 'next',
@@ -8,7 +10,7 @@ export const config = {
   // Repository to download from
   repo: process.env.FS_REPO || 'freesewing/freesewing',
   // Branch to download from
-  branch: process.env.FS_BRANCH || 'develop',
+  branch: process.env.FS_BRANCH || `v${version}`,
   i18n: [
     'account',
     'common',
@@ -51,6 +53,9 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# e2e test results
+playwright-report
 `,
   fetch: {
     config: [
@@ -107,7 +112,7 @@ yarn-error.log*
       'shared/components/lightbox.mjs',
       'shared/components/loader.mjs',
       'shared/components/modal.mjs',
-      'shared/components/page-link.mjs',
+      'shared/components/link.mjs',
       'shared/components/picker.mjs',
       'shared/components/popout.mjs',
       'shared/components/raw-span.mjs',
@@ -136,6 +141,7 @@ yarn-error.log*
       'shared/components/mdx/highlight.mjs',
       'shared/components/mdx/http.mjs',
       'shared/components/mdx/index.mjs',
+      'shared/components/mdx/mermaid.mjs',
       'shared/components/mdx/prev-next.mjs',
       'shared/components/mdx/read-more.mjs',
       'shared/components/mdx/tabbed-example.mjs',

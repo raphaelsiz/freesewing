@@ -1,5 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
-
 function draft({
   options,
   Point,
@@ -12,6 +10,7 @@ function draft({
   sa,
   paperless,
   macro,
+  store,
   part,
 }) {
   // Pocket seams here
@@ -55,6 +54,8 @@ function draft({
     .line(points.centerRight)
     .line(points.centerLeft)
     .close()
+
+  store.cutlist.addCut()
 
   // Complete?
   if (complete) {
@@ -118,6 +119,5 @@ export const pocket = {
     length: { pct: 50, min: 30, max: 100, menu: 'style' },
     edge: { pct: 25, min: 20, max: 50, menu: 'style' },
   },
-  plugins: [pluginBundle],
   draft,
 }
