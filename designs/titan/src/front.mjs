@@ -238,7 +238,7 @@ function titanFront({
 
   if (options.fitCrossSeam && options.fitCrossSeamFront) {
     let delta = crotchSeamDelta()
-    let previous_delta = delta
+    let previous_delta
     let rotate = ['waistIn', 'waistOut', 'cfWaist']
     let saved = []
     let run = 0
@@ -267,7 +267,7 @@ function titanFront({
       points.fork = saved.fork
     }
     if (Math.abs(delta) > 1 || Math.abs(delta) > Math.abs(previous_delta)) {
-      log.warning(
+      log.warn(
         'Unable to adjust the front crotch seam to fit the given measurements, after ' +
           run +
           ' iterations.'
@@ -315,12 +315,15 @@ function titanFront({
   // Seamline
   paths.seam = drawPath().attr('class', 'fabric')
 
+  points.grainlineTop.y = points.styleWaistIn.y
+  macro('grainline', {
+    from: points.grainlineTop,
+    to: points.grainlineBottom,
+  })
+
+  store.cutlist.addCut()
+
   if (complete) {
-    points.grainlineTop.y = points.styleWaistIn.y
-    macro('grainline', {
-      from: points.grainlineTop,
-      to: points.grainlineBottom,
-    })
     points.logoAnchor = new Point(points.crotchSeamCurveStart.x / 2, points.fork.y)
     snippets.logo = new Snippet('logo', points.logoAnchor)
     points.titleAnchor = points.logoAnchor.shift(-90, 60)
@@ -590,7 +593,7 @@ function titanFront({
   }
 
   if (adjustment_warning) {
-    log.warning(
+    log.warn(
       'We were not able to generate the Front pattern piece correctly. ' +
         'Manual fitting and alteration of this and other pattern pieces ' +
         'are likely to be needed. ' +

@@ -1,5 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
-
 function florenceMask({
   points,
   Point,
@@ -14,6 +12,7 @@ function florenceMask({
   snippets,
   macro,
   utils,
+  store,
   part,
 }) {
   points.topLeft = new Point(0, 0)
@@ -57,6 +56,8 @@ function florenceMask({
     .close()
     .attr('class', 'fabric')
 
+  store.cutlist.addCut()
+  store.cutlist.addCut({ material: 'lining' })
   if (complete) {
     points.logo = new Point(points.tipCenter.x / 2, points.tipCenterCp1.y)
     snippets.logo = new Snippet('logo', points.logo).attr('data-scale', 0.5)
@@ -141,6 +142,5 @@ export const mask = {
     height: { pct: 26, min: 23, max: 29, menu: 'fit' },
     curve: { pct: 12.5, min: 10, max: 15, menu: 'fit' },
   },
-  plugins: [pluginBundle],
   draft: florenceMask,
 }

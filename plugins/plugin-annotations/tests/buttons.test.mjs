@@ -11,7 +11,7 @@ pattern.draft().render()
 describe('Buttons Plugin Test', () => {
   for (const snippet of ['button', 'buttonhole', 'snap-stud', 'snap-socket']) {
     it(`Should add the ${snippet} snippet to defs`, () => {
-      expect(pattern.svg.defs.indexOf(`<g id="${snippet}">`)).to.not.equal(-1)
+      expect(pattern.svg.defs.get(snippet)).to.not.equal(false)
     })
   }
 
@@ -26,7 +26,7 @@ describe('Buttons Plugin Test', () => {
       },
       plugins: [annotationsPlugin],
     }
-    const Pattern = new Design({ parts: [part] })
+    const Pattern = new Design({ parts: [part], noCorePlugins: true })
     const svg = new Pattern().draft().render()
     expect(svg).to.contain('<use x="10" y="20" xlink:href="#button"')
   })
@@ -42,7 +42,7 @@ describe('Buttons Plugin Test', () => {
       },
       plugins: [annotationsPlugin],
     }
-    const Pattern = new Design({ parts: [part] })
+    const Pattern = new Design({ parts: [part], noCorePlugins: true })
     const svg = new Pattern().draft().render()
     expect(svg).to.contain('<use x="10" y="20" xlink:href="#buttonhole"')
   })
@@ -58,7 +58,7 @@ describe('Buttons Plugin Test', () => {
       },
       plugins: [annotationsPlugin],
     }
-    const Pattern = new Design({ parts: [part] })
+    const Pattern = new Design({ parts: [part], noCorePlugins: true })
     const svg = new Pattern().draft().render()
     expect(svg).to.contain('<use x="10" y="20" xlink:href="#buttonhole-start"')
   })
@@ -74,7 +74,7 @@ describe('Buttons Plugin Test', () => {
       },
       plugins: [annotationsPlugin],
     }
-    const Pattern = new Design({ parts: [part] })
+    const Pattern = new Design({ parts: [part], noCorePlugins: true })
     const svg = new Pattern().draft().render()
     expect(svg).to.contain('<use x="10" y="20" xlink:href="#buttonhole-end"')
   })
@@ -90,7 +90,7 @@ describe('Buttons Plugin Test', () => {
       },
       plugins: [annotationsPlugin],
     }
-    const Pattern = new Design({ parts: [part] })
+    const Pattern = new Design({ parts: [part], noCorePlugins: true })
     const svg = new Pattern().draft().render()
     expect(svg).to.contain('<use x="10" y="20" xlink:href="#snap-stud"')
   })
@@ -106,7 +106,7 @@ describe('Buttons Plugin Test', () => {
       },
       plugins: [annotationsPlugin],
     }
-    const Pattern = new Design({ parts: [part] })
+    const Pattern = new Design({ parts: [part], noCorePlugins: true })
     const svg = new Pattern().draft().render()
     expect(svg).to.contain('<use x="10" y="20" xlink:href="#snap-socket"')
   })

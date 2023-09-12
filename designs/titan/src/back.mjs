@@ -1,6 +1,5 @@
 import { pctBasedOn } from '@freesewing/core'
 import { elastics } from '@freesewing/snapseries'
-import { pluginBundle } from '@freesewing/plugin-bundle'
 
 function titanBack({
   points,
@@ -178,7 +177,7 @@ function titanBack({
     let rotate = ['waistIn', 'waistOut']
     let saved = []
     let delta = crossSeamDelta()
-    let previous_delta = delta
+    let previous_delta
     let run = 0
     do {
       previous_delta = delta
@@ -208,7 +207,7 @@ function titanBack({
       points.forkCp2 = saved.forkCp2
     }
     if (Math.abs(delta) > 1 || Math.abs(delta) > Math.abs(previous_delta)) {
-      log.warning('Unable to adjust the back crotch seam to fit the given measurements.')
+      log.warn('Unable to adjust the back crotch seam to fit the given measurements.')
       adjustment_warning = true
     }
   }
@@ -240,12 +239,15 @@ function titanBack({
   // Paths
   paths.seam = drawPath().attr('class', 'fabric')
 
+  points.grainlineTop.y = points.styleWaistOut.y
+  macro('grainline', {
+    from: points.grainlineTop,
+    to: points.grainlineBottom,
+  })
+
+  store.cutlist.addCut()
+
   if (complete) {
-    points.grainlineTop.y = points.styleWaistOut.y
-    macro('grainline', {
-      from: points.grainlineTop,
-      to: points.grainlineBottom,
-    })
     macro('scalebox', { at: points.knee })
     points.logoAnchor = new Point(points.crossSeamCurveStart.x / 2, points.fork.y)
     snippets.logo = new Snippet('logo', points.logoAnchor)
@@ -519,7 +521,7 @@ function titanBack({
   }
 
   if (adjustment_warning) {
-    log.warning(
+    log.warn(
       'We were not able to generate the Back pattern piece correctly. ' +
         'Manual fitting and alteration of this and other pattern pieces ' +
         'are likely to be needed. ' +
@@ -536,7 +538,6 @@ function titanBack({
 
 export const back = {
   name: 'titan.back',
-  plugins: [pluginBundle],
   measurements: [
     'crossSeam',
     'crossSeamFront',

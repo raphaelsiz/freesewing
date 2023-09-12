@@ -1,5 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
-
 function draftHolmesEar({
   Point,
   points,
@@ -14,6 +12,7 @@ function draftHolmesEar({
   paperless,
   macro,
   absoluteOptions,
+  store,
   part,
 }) {
   // Design pattern here
@@ -34,9 +33,13 @@ function draftHolmesEar({
     .hide()
   paths.hemBase = new Path().move(points.bottomFlipped).line(points.bottom).hide()
   paths.seam = paths.saBase.join(paths.hemBase).close()
+
+  macro('grainline', { from: points.top, to: new Point(0, points.bottom.y) })
+
+  store.cutlist.addCut({ cut: 4 })
+
   // Complete?
   if (complete) {
-    macro('grainline', { from: points.top, to: new Point(0, points.bottom.y) })
     points.logo = new Point(-0.5 * points.bottom.x, 0.75 * points.bottom.y)
     snippets.logo = new Snippet('logo', points.logo).attr('data-scale', 0.7)
     points.title = new Point(0.3 * points.bottom.x, 0.75 * points.bottom.y)
@@ -97,8 +100,7 @@ export const ear = {
     lengthRatio: { pct: 55, min: 40, max: 60, menu: 'style' },
     earLength: { pct: 100, min: 80, max: 150, menu: 'style' },
     earWidth: { pct: 100, min: 80, max: 150, menu: 'style' },
-    buttonhole: { bool: false },
+    buttonhole: { bool: false, menu: 'style' },
   },
-  plugins: [pluginBundle],
   draft: draftHolmesEar,
 }

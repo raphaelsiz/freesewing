@@ -1,4 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
 import {
   calculateHelpers,
   draftTieShape,
@@ -13,6 +12,8 @@ function trayvonFabricTail(params) {
   calculateHelpers(params)
   draftTieShape(params, store.get('backTip') * 2.5, absoluteOptions.knotWidth * 2.5, true)
   paths.seam.attributes.add('class', 'fabric')
+
+  store.cutlist.addCut({ cut: 1 })
 
   // Complete pattern?
   if (complete) {
@@ -62,11 +63,14 @@ function trayvonFabricTip(params) {
     sa,
     snippets,
     absoluteOptions,
+    store,
   } = params
 
   calculateHelpers(params)
   draftTieShape(params, absoluteOptions.tipWidth * 2.5, absoluteOptions.knotWidth * 2.5, true)
   paths.seam.attributes.add('class', 'fabric')
+
+  store.cutlist.addCut({ cut: 1 })
 
   // Complete pattern?
   if (complete) {
@@ -111,7 +115,6 @@ export const fabricTail = {
   name: 'trayvon.fabricTail',
   measurements: ['hpsToWaistBack', 'waistToHips', 'neck'],
   options,
-  plugins: [pluginBundle],
   draft: trayvonFabricTail,
 }
 
@@ -119,6 +122,5 @@ export const fabricTip = {
   name: 'trayvon.fabricTip',
   measurements: ['hpsToWaistBack', 'waistToHips', 'neck'],
   options,
-  plugins: [pluginBundle],
   draft: trayvonFabricTip,
 }

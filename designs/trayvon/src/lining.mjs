@@ -1,4 +1,3 @@
-import { pluginBundle } from '@freesewing/plugin-bundle'
 import {
   calculateHelpers,
   draftTieShape,
@@ -41,6 +40,8 @@ function trayvonLiningTail(params) {
     .close()
     .attr('class', 'lining')
 
+  store.cutlist.addCut({ cut: 1, material: 'lining' })
+
   // Complete pattern?
   if (complete) {
     macro('title', {
@@ -72,6 +73,7 @@ function trayvonLiningTip(params) {
     sa,
     snippets,
     absoluteOptions,
+    store,
   } = params
 
   calculateHelpers(params)
@@ -91,6 +93,8 @@ function trayvonLiningTip(params) {
     .line(points.tip)
     .close()
     .attr('class', 'lining')
+
+  store.cutlist.addCut({ cut: 1, material: 'lining' })
 
   // Complete pattern?
   if (complete) {
@@ -118,7 +122,6 @@ export const liningTail = {
   name: 'trayvon.liningTail',
   measurements: ['hpsToWaistBack', 'waistToHips', 'neck'],
   options,
-  plugins: [pluginBundle],
   draft: trayvonLiningTail,
 }
 
@@ -126,6 +129,5 @@ export const liningTip = {
   name: 'trayvon.liningTip',
   measurements: ['hpsToWaistBack', 'waistToHips', 'neck'],
   options,
-  plugins: [pluginBundle],
   draft: trayvonLiningTip,
 }
